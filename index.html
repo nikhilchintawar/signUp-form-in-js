@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+ 
+</head>
+<body>
+
+  <header>
+    <h1>Learn to code by watching others</h1>
+    <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      but understanding how developers think is invaluable.</p>
+  </header>
+
+  <section>
+    <div class="trialPeriod">
+      <p><strong>Try it free 7 days</strong> then<br>$20/mo. thereafter</p>
+    </div> 
+  </section>
+
+  <div class="form">
+    <form name="signUpForm" action="" class="signup">
+      
+        <input type="text" id="firstName" name="firstName" placeholder="First Name">
+        <span class="error"></span>     
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+        <span class="error"></span>     
+        <input type="email" id="mail" name="emailAddress" placeholder="Email Address">
+        <span class="error"></span>     
+        <input type="password" id="pass" name="password" placeholder="Password">
+        <span class="error"></span>     
+        <button type="submit">CLAIM YOUR FREE TRIAL</button>
+     
+    <div id="checkbox">
+      <p>By clicking on the button, you are agreeing to our <span class="terms">Terms and Services</span></p>
+    </div>      
+     
+    </form>
+  </div>
+ 
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Nikhil Chintawar</a>.
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
