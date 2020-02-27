@@ -114,7 +114,7 @@ button{
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px){
+@media screen and (min-device-width: 900px) and (max-device-width: 1600px){
     body{
         background-image: url(images/bg-intro-desktop.png);
     }
