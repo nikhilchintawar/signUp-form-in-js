@@ -1,33 +1,38 @@
-function validateForms() {
+function validateForms(e) {
     let firstName = document.forms["signUpForm"]["firstName"].value;
     let lastName = document.forms["signUpForm"]["lastName"].value;
     let emailAddress = document.forms["signUpForm"]["emailAddress"].value;
     let password = document.forms["signUpForm"]["password"].value;
     let emailPattern =  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (firstName === "") {
-       let firstNameError = "First Name cannot be empty!"
-       document.querySelector('.error').innerHTML = firstNameError;  
+    if (firstName.length < 1) {
+       let firstNameError = "First Name is required!"
+       document.querySelector('#error').innerHTML = firstNameError;  
        return false
     }
-    else if(lastName === "") {
-       let lastNameError = "Last Name cannot be empty";
-        document.querySelector('.error').innerHTML = lastNameError;
+    else if(lastName.length < 1) {
+       let lastNameError = "Last Name is required!";
+        document.querySelector('#error1').innerHTML = lastNameError;
         return false
-    } else if(emailAddress !== emailPattern){
-       let emailError = "email is invalid";
-       document.querySelector('.error').innerHTML = emailError;
+    } else if(emailAddress === ""){ 
+       let emailError = "Email address is required!";
+       document.querySelector('#error2').innerHTML = emailError;
        return false
-    } else if(password === ""){
-        let passwordError = "password cannot be empty";
-        document.querySelector('.error').innerHTML = passwordError;
-        return false
+    } else if(!emailPattern.test(emailAddress)){
+        document.querySelector('#error2').innerHTML = "please enter valid email."
     }
-        return true;
+    else if(password === ""){
+        let passwordError = "password is required!";
+        document.querySelector('#error3').innerHTML = passwordError;
+        return false
+    } else{
+        document.querySelector('.success').innerHTML = "Form is successfully submitted";
+    }
+   
     
 }
 
 let button = document.querySelector('button');
 button.addEventListener("click", (e) =>{
     validateForms();
-    
+   
 })

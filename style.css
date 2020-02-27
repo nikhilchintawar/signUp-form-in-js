@@ -57,7 +57,7 @@ button{
     color: var(--text-color);
     padding: 12px 20px;
     border: none;
-    margin: 8px 0;
+    margin: 8px 0 0 0;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -74,12 +74,87 @@ button{
  #checkbox .terms{
      color: #ff0000;
  }
-.error{
+#error{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 0.7rem;
+    color: #ff0000;
+}
+#error1{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 0.7rem;
+    color: #ff0000;
+}
+#error2{
     display: flex;
     flex-direction: row-reverse;
     font-size: 0.7rem;
     color: #ff0000;
 }
 
+#error3{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 0.7rem;
+    color: #ff0000;
+}
+
+.success{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+    color: #66e929;
+}
+
+
+
+
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px){
+    body{
+        background-image: url(images/bg-intro-desktop.png);
+    }
+    h1{
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+    /* header.p{
+        text-align: justify;
+        text-align-last: justify;
+    } */
+    .text{
+        text-align: justify;
+        margin-left: 110px;
+        font-size: 0.9rem;
+    }
+    header{
+        margin-top: 180px;
+        margin-left: 30px;
+        margin-right: 50px;
+        
+    }
+   
+    .main{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    section{
+        align-items: center;
+        width: 80%;
+        margin-top: 100px;
+    }
+    .trialPeriod{
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+   #checkbox p{
+       margin-left: 70px;
+   }
+   footer{
+    margin-top: 80px;
+   }
+}
